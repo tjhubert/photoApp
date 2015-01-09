@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('photoAppApp', [
+  .module('photoApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
