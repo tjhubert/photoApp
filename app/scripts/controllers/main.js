@@ -9,9 +9,22 @@
  */
 angular.module('photoApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    $scope.passions = [
+      {
+          name:'Camera',
+          description:'I like to take pictures'
+      },
+      {
+          name:'Cook',
+          description:'I like to cook for my friends'
+      },
+      {
+          name:'Lift',
+          description:'I like to lift heavy things'
+      },
+      {
+          name:'Code',
+          description:'I like to type in the Terminal'
+      }
     ];
   });
