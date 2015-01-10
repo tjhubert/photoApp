@@ -1,13 +1,12 @@
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
+  <h1>The cliched Hello World!</h1>
   <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
+    Hubert Theodore's page
   </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">OK<span class="glyphicon glyphicon-ok"></span></a></p>
 </div>
 
-<div class="row marketing" ng-repeat="passion in passions">
+<div class="row marketing" ng-controllet="MainCtrl" ng-repeat="passion in passions">
     <h4>{{passion.name}}</h4>
   <p>
     {{passion.description}}

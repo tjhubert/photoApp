@@ -1,0 +1,7 @@
+<input class="input-block-level" placeholder="Search through the album.." type="text" ng-model="searchPhoto">
+<div ng-controller="GalleryCtrl" ng-repeat="photo in album.photos | filter: searchPhoto">
+    <img class="img-responsive" ng-src="{{photo.image}}">
+    <div class="caption">
+        {{photo.city}}, {{photo.country}} ({{photo.year}})
+    </div>
+</div>
