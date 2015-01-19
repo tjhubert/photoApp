@@ -7,7 +7,6 @@
  * # GalleryCtrl
  * Controller of the photoApp
  */
-angular.module('photoApp')
-  .controller('GalleryCtrl', function ($scope, Album) {
-      $scope.album = Album;
+photoApp.controller('AboutCtrl', function ($scope, Quotes) {
+      $scope.quotes = Quotes;
   });

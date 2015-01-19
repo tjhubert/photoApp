@@ -1,6 +1,6 @@
 photoApp.factory('Album', function () {
     var Album={};
-    Album.photos =
+    Album =
     [
         {
             image: 'images/HTJ102.jpg',
@@ -67,4 +67,4 @@ photoApp.factory('Album', function () {
         }
     ];
     return Album;
-})
+});

@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-angular
+var photoApp = angular
   .module('photoApp', [
     'ngAnimate',
     'ngCookies',

@@ -24,10 +24,10 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right" ng-controller="IndexCtrl">
-          <li ng-class="{ active: isActive('#')}"><a ng-href="#">Home</a></li>
-          <li ng-class="{ active: isActive('#/about')}"><a ng-href="#/about">About</a></li>
-          <li ng-class="{ active: isActive('#/gallery')}"><a ng-href="#/gallery">Gallery</a></li>
-          <li ng-class="{ active: isActive('#/contact')}"><a ng-href="#/contact">Contact</a></li>
+            <li class="{{ isActive('/') }}"><a ng-href="#">Home</a></li>
+            <li class="{{ isActive('/about') }}"><a ng-href="#/about">About</a></li>
+            <li class="{{ isActive('/gallery') }}"><a ng-href="#/gallery">Gallery</a></li>
+            <li class="{{ isActive('/contact') }}"><a ng-href="#/contact">Contact</a></li>
         </ul>
         <h3 class="text-muted">tjhubert's Page</h3>
       </div>
@@ -79,7 +79,9 @@
         <script src="scripts/controllers/gallery-controller.js"></script>
         <script src="scripts/controllers/contact-controller.js"></script>
         <script src="scripts/services/gallery-service.js"></script>
+        <script src="scripts/services/about-service.js"></script>
         <script src="scripts/directives/gallery-directive.js"></script>
+        <script src="scripts/filters/gallery-filter.js"></script>
         <!-- endbuild -->
 </body>
 </html>
