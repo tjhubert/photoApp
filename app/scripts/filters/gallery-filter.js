@@ -5,26 +5,26 @@ photoApp.filter('filterPhoto', function () {
             filtered = album;
         }
         else {
-            for (j in album) {
+            for (var j in album) {
                 var photo = album[j];
                 if (typeof activeTagList !== 'undefined' && activeTagList.length > 0 ) {
-                    allTags = [photo.city, photo.country, photo.year].concat(photo.tags);
-                    for (i in allTags)
+                    var allTags = [photo.city, photo.country, photo.year].concat(photo.tags);
+                    for (var i in allTags)
                     {
                         allTags[i] = allTags[i].toLowerCase();
                     }
-                    tagFound = false;
-                    continueLoop = true;
+                    var tagMatch = false;
+                    var continueLoop = true;
                     for (i=0; i<activeTagList.length && continueLoop; i++) {
                         if (allTags.indexOf(activeTagList[i].toLowerCase()) != -1 || activeTagList[i].toLowerCase() == 'all') {
-                            tagFound = true;
+                            tagMatch = true;
                         }
                         else {
-                            tagFound = false;
+                            tagMatch = false;
                             continueLoop = false;
                         }
                     }
-                    if (tagFound){
+                    if (tagMatch){
                         filtered.push(photo);
                     }
                 }

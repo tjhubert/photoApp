@@ -8,6 +8,21 @@ photoApp.factory('Quotes', function () {
             tags : ['photography']
         },
         {
+            quote: 'Digital photographs are becoming too sharp, too real for me. Don\'t we sometimes need a break from reality?',
+            by: 'me',
+            tags : ['photography']
+        },
+        {
+            quote: 'wise words from c++ documentation: Another property of friendships is that they are not transitive: The friend of a friend is not considered a friend unless explicitly specified.',
+            by: 'me',
+            tags : ['photography']
+        },
+        {
+            quote: 'A photographer\'s challenge is to find beauty in ugliness, order in chaos. Much like a physicist, huh?',
+            by: 'me',
+            tags : ['photography']
+        },
+        {
             quote: 'Beautiful pictures bore me, they please the eyes but not necessarily the heart.',
             by: 'me',
             tags : ['photography']

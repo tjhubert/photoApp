@@ -10,11 +10,37 @@ photoApp.directive('photoSlider', function () {
             scope.prev = function () {
                 scope.currentIndex = scope.currentIndex > 0 ? scope.currentIndex - 1  : scope.filtered.length - 1;
             };
+            scope.updateCurrentIndexAfterSearch = function () {
+                if (scope.currentIndex > scope.filtered.length - 1)
+                {
+                    scope.currentIndex = scope.filtered.length - 1;
+                }
+            };
+            scope.updateSlide = function () {
+                if (typeof scope.filtered !== 'undefined' && scope.filtered.length > 0 )
+                {
+                    angular.forEach(scope.filtered, function(image) {
+                    image.visible = false; // make every image invisible
+                    });
+                    scope.filtered[scope.currentIndex].visible = true; // make the current image visible
+                }
+            };
+
             scope.$watch('currentIndex', function() {
-                angular.forEach(scope.filtered, function(image) {
-                      image.visible = false; // make every image invisible
-                });
-                scope.filtered[scope.currentIndex].visible = true; // make the current image visible
+                scope.updateSlide();
+            });
+            scope.$watchCollection('filtered', function(newVal, oldVal) {
+                if (typeof oldVal === 'undefined' || oldVal.length <= 0)
+                { 
+                    scope.next();
+                    scope.updateSlide();
+                }
+                else if (newVal.indexOf(oldVal[scope.currentIndex]) === -1)
+                {
+                    oldVal[scope.currentIndex].visible = false;
+                    scope.prev();
+                    scope.updateSlide();
+                }
             });
         }
     };
@@ -24,14 +50,13 @@ photoApp.directive('photoActiveTag', function () {
     return {
         restrict : 'EA',
         link : function(scope) {
-            scope.activeTagList = [];
             scope.addActiveTag = function () {
                 if (scope.activeTag){
-                    tempListSplitSpace = scope.activeTag.split(" ");
-                    for (i=0; i<tempListSplitSpace.length; i++)
+                    var tempListSplitSpace = scope.activeTag.split(" ");
+                    for (var i=0; i<tempListSplitSpace.length; i++)
                     {
-                        tempListSplitComma = tempListSplitSpace[i].split(",");
-                        for (j=0; j<tempListSplitComma.length; j++)
+                        var tempListSplitComma = tempListSplitSpace[i].split(",");
+                        for (var j=0; j<tempListSplitComma.length; j++)
                         {
                             if (tempListSplitComma[j] && scope.activeTagList.indexOf(tempListSplitComma[j]) == -1)
                             {

@@ -177,7 +177,7 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          //'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -205,9 +205,15 @@ module.exports = function (grunt) {
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+      css: ['<%= yeoman.dist %>/css/*.css'],
+      js: '<%= yeoman.dist %>/js/*.js',
       options: {
-        assetsDirs: ['<%= yeoman.dist %>','<%= yeoman.dist %>/images']
+        assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images'],
+        patterns: {
+            js: [
+                [/(images\/.*?\.(?:gif|jpeg|jpg|png|webp))/gm, 'Update the JS to reference our revved images']
+            ]
+        }
       }
     },
 
@@ -237,16 +243,23 @@ module.exports = function (grunt) {
     //   dist: {}
     // },
 
-    imagemin: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= yeoman.dist %>/images'
-        }]
-      }
-    },
+    imagemin : {
+      dist : {
+        files : [{
+                expand : true,
+                cwd : '<%= yeoman.app %>/images',
+                src : '{,*/}*.{png,jpg,jpeg}',
+                dest : '<%= yeoman.dist %>/images'
+            }, {
+                expand : true,
+                flatten : true,
+                cwd : '<%= yeoman.app %>/styles',
+                src : '**/*.{png,jpg,jpeg,gif}',
+                dest : '<%= yeoman.dist %>/styles/images'
+            }
+        ]
+    }
+  },
 
     svgmin: {
       dist: {

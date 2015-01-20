@@ -7,6 +7,7 @@
  * # GalleryCtrl
  * Controller of the photoApp
  */
-photoApp.controller('GalleryCtrl', function ($scope, Album) {
+photoApp.controller('GalleryCtrl', function ($scope, $filter, Album) {
+      $scope.activeTagList = [];
       $scope.album = Album;
-  });
+});
