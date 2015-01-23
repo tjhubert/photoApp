@@ -1,33 +1,28 @@
 photoApp.filter('filterPhoto', function () {
     return function (album, activeTagList) {
         var filtered = [];
-        if ( typeof activeTagList !== 'undefined' && ( (activeTagList.length == 1 && activeTagList[0].toLowerCase() == 'all') || activeTagList.length == 0 ) ) {
-            filtered = album;
-        }
-        else {
-            for (var j in album) {
-                var photo = album[j];
-                if (typeof activeTagList !== 'undefined' && activeTagList.length > 0 ) {
-                    var allTags = [photo.city, photo.country, photo.year].concat(photo.tags);
-                    for (var i in allTags)
-                    {
-                        allTags[i] = allTags[i].toLowerCase();
-                    }
-                    var tagMatch = false;
-                    var continueLoop = true;
-                    for (i=0; i<activeTagList.length && continueLoop; i++) {
-                        if (allTags.indexOf(activeTagList[i].toLowerCase()) != -1 || activeTagList[i].toLowerCase() == 'all') {
-                            tagMatch = true;
-                        }
-                        else {
-                            tagMatch = false;
-                            continueLoop = false;
-                        }
-                    }
-                    if (tagMatch){
-                        filtered.push(photo);
+
+        for (var i in album) {
+            var currentPhoto = album[i];
+            var allTags = [currentPhoto.city, currentPhoto.country, currentPhoto.year].concat(currentPhoto.tags);
+            var currentActiveTag;
+            var currentPhotoTag;
+            var remainingTags = activeTagList.slice(0);
+
+            for (var j = 0; j < allTags.length; j++) {
+                currentPhotoTag = allTags[j].toLowerCase();
+
+                for (var k = 0; k < remainingTags.length; k++){
+                    currentActiveTag = remainingTags[k].toLowerCase();
+
+                    if (currentPhotoTag.indexOf(currentActiveTag) !== -1 || currentActiveTag == 'all') {
+                        remainingTags.splice(k, 1);
+                        k--;
                     }
                 }
+            }
+            if (remainingTags.length === 0){
+                filtered.push(currentPhoto);
             }
         }
         return filtered;

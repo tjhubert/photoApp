@@ -31,15 +31,15 @@ photoApp.directive('photoSlider', function () {
             });
             scope.$watchCollection('filtered', function(newVal, oldVal) {
                 if (typeof oldVal === 'undefined' || oldVal.length <= 0)
-                { 
+                {   
                     scope.next();
-                    scope.updateSlide();
                 }
                 else if (newVal.indexOf(oldVal[scope.currentIndex]) === -1)
                 {
-                    oldVal[scope.currentIndex].visible = false;
+                    angular.forEach(oldVal, function(image) {
+                        image.visible = false; // make every image invisible
+                    });
                     scope.prev();
-                    scope.updateSlide();
                 }
             });
         }
@@ -50,25 +50,29 @@ photoApp.directive('photoActiveTag', function () {
     return {
         restrict : 'EA',
         link : function(scope) {
-            scope.addActiveTag = function () {
-                if (scope.activeTag){
-                    var tempListSplitSpace = scope.activeTag.split(" ");
-                    for (var i=0; i<tempListSplitSpace.length; i++)
+            scope.activeTagList = ['top'];
+            scope.addActiveTag = function (activeTag) {
+                if (scope.activeTagList.length === 1 && scope.activeTagList[0] === 'top')
+                {
+                    scope.activeTagList = [];
+                }
+                if (activeTag){
+                    var tempListSplitComma = activeTag.split(",");
+                    for (var i = 0; i < tempListSplitComma.length; i++)
                     {
-                        var tempListSplitComma = tempListSplitSpace[i].split(",");
-                        for (var j=0; j<tempListSplitComma.length; j++)
+                        if (tempListSplitComma[i] && scope.activeTagList.indexOf(tempListSplitComma[i]) === -1)
                         {
-                            if (tempListSplitComma[j] && scope.activeTagList.indexOf(tempListSplitComma[j]) == -1)
-                            {
-                                scope.activeTagList.push(tempListSplitComma[j]);
-                            }
+                            scope.activeTagList.push(tempListSplitComma[i].trim());
                         }
                     }
                     scope.activeTag = '';
                 }
             };
+            scope.removeActiveTag = function(index) {
+                scope.activeTagList.splice(index, 1);
+            }
             scope.clearActiveTagList = function () {
-                scope.activeTagList = [];
+                scope.activeTagList = ['top'];
             };
         }
     };

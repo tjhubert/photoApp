@@ -1,16 +1,29 @@
 <div ng-controller="GalleryCtrl">
     <photo-active-tag>
-        <form ng-submit="addActiveTag()">
+        <!-- Single button -->
+        <div class="btn-group">
+            <span ng-repeat = "tagButton in tagButtons">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    {{tagButton.first}} <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li ng-repeat="tagDropDown in tagButton.second">
+                  <a href="" ng-click="addActiveTag(tagDropDown)">{{tagDropDown}}</a>
+                  </li>
+              </ul>
+            </span>
+        </div>
+      <!--  <form ng-submit="addActiveTag()">
             <input class="input-block-level" placeholder="Search through the album.." type="text" ng-model="activeTag">
             <input type="submit" id="submit" value="Submit" />
-            <pre>list={{activeTagList}}</pre>
-        </form>
-        <a href="" ng-click="activeTag='Chicago'; addActiveTag()">Chicago</a>
-        <a href="" ng-click="clearActiveTagList()">Clear</a>
+        </form>-->
+        <div ng-repeat = "photoTag in activeTagList">
+                {{photoTag}} <a href="" ng-click="removeActiveTag($index)">x</a>
+        </div>
         </photo-active-tag>
     <photo-slider>
         <div ng-repeat="photo in filtered = (album | filterPhoto: activeTagList)" ng-show="photo.visible">
-            <a href="" ng-click="next()"><img class="img-responsive" ng-src="{{photo.image}}"></a>
+            <a href="" ng-click="next()"><img class="img-responsive" style = "max-height : 700px;"ng-src="{{photo.image}}"></a>
                 <div class="caption">
                     {{photo.city}}, {{photo.country}} ({{photo.year}})
                 </div>

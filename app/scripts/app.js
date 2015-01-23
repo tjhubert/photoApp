@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc overview
- * @name photoAppApp
+ * @name photoApp
  * @description
- * # photoAppApp
+ * # photoApp
  *
  * Main module of the application.
  */
@@ -34,6 +34,10 @@ var photoApp = angular
       .when('/contact', {
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
       })
       .otherwise({
         redirectTo: '/'
