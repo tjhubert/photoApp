@@ -25,6 +25,7 @@ photoApp.filter('filterPhoto', function () {
                 filtered.push(currentPhoto);
             }
         }
+        //return $filter('orderBy')(filtered, year, true);
         return filtered;
     }
 });

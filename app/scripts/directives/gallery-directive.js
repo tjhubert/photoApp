@@ -32,14 +32,16 @@ photoApp.directive('photoSlider', function () {
             scope.$watchCollection('filtered', function(newVal, oldVal) {
                 if (typeof oldVal === 'undefined' || oldVal.length <= 0)
                 {   
-                    scope.next();
+                    scope.currentIndex = 0 ;
+                    scope.updateSlide();
                 }
                 else if (newVal.indexOf(oldVal[scope.currentIndex]) === -1)
                 {
                     angular.forEach(oldVal, function(image) {
                         image.visible = false; // make every image invisible
                     });
-                    scope.prev();
+                    scope.currentIndex = 0;
+                    scope.updateSlide();
                 }
             });
         }

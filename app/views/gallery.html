@@ -1,5 +1,9 @@
 <div ng-controller="GalleryCtrl">
     <photo-active-tag>
+        <form ng-submit="addActiveTag(activeTag)">
+            <input class="input-block-level" placeholder="Search through the album.." type="text" ng-model="activeTag">
+            <input type="submit" id="submit" value="Submit" />
+        </form>
         <!-- Single button -->
         <div class="btn-group">
             <span ng-repeat = "tagButton in tagButtons">
@@ -13,16 +17,12 @@
               </ul>
             </span>
         </div>
-      <!--  <form ng-submit="addActiveTag()">
-            <input class="input-block-level" placeholder="Search through the album.." type="text" ng-model="activeTag">
-            <input type="submit" id="submit" value="Submit" />
-        </form>-->
         <div ng-repeat = "photoTag in activeTagList">
                 {{photoTag}} <a href="" ng-click="removeActiveTag($index)">x</a>
         </div>
         </photo-active-tag>
     <photo-slider>
-        <div ng-repeat="photo in filtered = (album | filterPhoto: activeTagList)" ng-show="photo.visible">
+        <div ng-repeat="photo in filtered = (album | filterPhoto: activeTagList | orderBy: '-year')" ng-show="photo.visible">
             <a href="" ng-click="next()"><img class="img-responsive" style = "max-height : 700px;"ng-src="{{photo.image}}"></a>
                 <div class="caption">
                     {{photo.city}}, {{photo.country}} ({{photo.year}})

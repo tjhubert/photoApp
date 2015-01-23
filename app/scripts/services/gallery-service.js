@@ -20,14 +20,14 @@ photoApp.factory('Album', function () {
             city: 'Belitong',
             country: 'Indonesia',
             year : '2012',
-            tags : ['digital', 'bnw', 'abstract']
+            tags : ['digital', 'monochrome', 'abstract']
         },
         {
             image: 'images/HTJ-6.jpg',
             city: 'Belitong',
             country: 'Indonesia',
             year : '2012',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-7.jpg',
@@ -41,35 +41,35 @@ photoApp.factory('Album', function () {
             city: 'Belitong',
             country: 'Indonesia',
             year : '2012',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-9.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['film', 'bnw', 'animal']
+            tags : ['film', 'monochrome', 'animal']
         },
         {
             image: 'images/HTJ-10.jpg',
             city: 'Belitong',
             country: 'Jakarta',
             year : '2012',
-            tags : ['film', 'bnw', 'portrait']
+            tags : ['film', 'monochrome', 'portrait']
         },
         {
             image: 'images/HTJ-11.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['film', 'bnw', 'street', 'bus']
+            tags : ['film', 'monochrome', 'street', 'bus']
         },
         {
             image: 'images/HTJ-12.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['film', 'bnw', 'street', 'bus']
+            tags : ['film', 'monochrome', 'street', 'bus']
         },
         {
             image: 'images/HTJ-13.jpg',
@@ -83,7 +83,7 @@ photoApp.factory('Album', function () {
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['digital', 'bnw', 'portrait', 'sister']
+            tags : ['digital', 'monochrome', 'portrait', 'sister']
         },
         {
             image: 'images/HTJ-15.jpg',
@@ -97,70 +97,70 @@ photoApp.factory('Album', function () {
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['film', 'bnw', 'street']
+            tags : ['film', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-17.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-18.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-19.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['digital', 'bnw', 'ecp', 'top']
+            tags : ['digital', 'monochrome', 'ecp', 'top']
         },
         {
             image: 'images/HTJ-20.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['digital', 'bnw', 'ecp', 'top']
+            tags : ['digital', 'monochrome', 'ecp', 'top']
         },
         {
             image: 'images/HTJ-21.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-22.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-23.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-24.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-25.jpg',
             city: 'Koh Samui',
             country: 'Thailand',
             year : '2012',
-            tags : ['digital', 'bnw', 'street', 'top']
+            tags : ['digital', 'monochrome', 'street', 'top']
         },
         {
             image: 'images/HTJ-26.jpg',
@@ -174,7 +174,7 @@ photoApp.factory('Album', function () {
             city: 'Bandung',
             country: 'Indonesia',
             year : '2012',
-            tags : ['digital', 'bnw', 'sister']
+            tags : ['digital', 'monochrome', 'sister']
         },
         {
             image: 'images/HTJ-28.jpg',
@@ -202,14 +202,14 @@ photoApp.factory('Album', function () {
             city: 'Jakarta',
             country: 'Indonesia',
             year : '2013',
-            tags : ['film', 'bnw', 'street', 'top']
+            tags : ['film', 'monochrome', 'street', 'top']
         },
         {
             image: 'images/HTJ-33.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2013',
-            tags : ['digital', 'film', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-34.jpg',
@@ -223,42 +223,42 @@ photoApp.factory('Album', function () {
             city: 'Tokyo',
             country: 'Japan',
             year : '2013',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-36.jpg',
             city: 'Tokyo',
             country: 'Japan',
             year : '2013',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-37.jpg',
             city: 'Tokyo',
             country: 'Japan',
             year : '2013',
-            tags : ['digital', 'bnw', 'street', 'top']
+            tags : ['digital', 'monochrome', 'street', 'top']
         },
         {
             image: 'images/HTJ-38.jpg',
             city: 'Kyoto',
             country: 'Japan',
             year : '2013',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-39.jpg',
             city: 'Tokyo',
             country: 'Japan',
             year : '2013',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-40.jpg',
             city: 'Tokyo',
             country: 'Japan',
             year : '2013',
-            tags : ['digital', 'bnw', 'street', 'selfie']
+            tags : ['digital', 'monochrome', 'street', 'selfie']
         },
         {
             image: 'images/HTJ-42.jpg',
@@ -272,21 +272,21 @@ photoApp.factory('Album', function () {
             city: 'Osaka',
             country: 'Japan',
             year : '2013',
-            tags : ['digital', 'bnw', 'street', 'top']
+            tags : ['digital', 'monochrome', 'street', 'top']
         },
         {
             image: 'images/HTJ-44.jpg',
             city: 'Osaka',
             country: 'Japan',
             year : '2013',
-            tags : ['digital', 'bnw', 'street', 'top', 'portrait']
+            tags : ['digital', 'monochrome', 'street', 'top', 'portrait']
         },
         {
             image: 'images/HTJ-45.jpg',
             city: 'Osaka',
             country: 'Japan',
             year : '2013',
-            tags : ['digital', 'bnw', 'street']
+            tags : ['digital', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-46.jpg',
@@ -300,9 +300,9 @@ photoApp.factory('Album', function () {
             city: 'Singapore',
             country: 'Singapore',
             year : '2012',
-            tags : ['film', 'bnw', 'bus', 'street', 'top']
+            tags : ['film', 'monochrome', 'bus', 'street', 'top']
         },
-         {
+        {
             image: 'images/HTJ-50.jpg',
             city: 'Jakarta',
             country: 'Indonesia',
@@ -314,14 +314,14 @@ photoApp.factory('Album', function () {
             city: 'Jakarta',
             country: 'Indonesia',
             year : '2013',
-            tags : ['film', 'bnw', 'street']
+            tags : ['film', 'monochrome', 'street']
         },
         {
             image: 'images/HTJ-53.jpg',
             city: 'Singapore',
             country: 'Singapore',
             year : '2013',
-            tags : ['digital', 'bnw', 'street', 'top']
+            tags : ['digital', 'monochrome', 'street', 'top']
         },
         {
             image: 'images/HTJ-54.jpg',
@@ -349,7 +349,7 @@ photoApp.factory('Album', function () {
             city: 'Singapore',
             country: 'Singapore',
             year : '2013',
-            tags : ['digital', 'bnw']
+            tags : ['digital', 'monochrome']
         },
         {
             image: 'images/HTJ-58.jpg',
@@ -363,7 +363,7 @@ photoApp.factory('Album', function () {
             city: 'New York City',
             country: 'USA',
             year : '2013',
-            tags : ['film', 'bnw', 'street', 'top']
+            tags : ['film', 'monochrome', 'street', 'top']
         },
         {
             image: 'images/HTJ-69.jpg',
@@ -467,7 +467,7 @@ photoApp.factory('Album', function () {
             image: 'images/HTJ-90.jpg',
             city: 'New York City',
             country: 'USA',
-            year : '2013',
+            year : '2014',
             tags : ['digital', 'color', 'street', 'top']
         },
         {
@@ -496,8 +496,120 @@ photoApp.factory('Album', function () {
             city: 'New York City',
             country: 'USA',
             year : '2013',
-            tags : ['film', 'bnw', 'street', 'top']
+            tags : ['film', 'monochrome', 'street', 'top']
         },
+        {
+            image: 'images/HTJ-95.jpg',
+            city: 'Belitong',
+            country: 'Indonesia',
+            year : '2012',
+            tags : ['digital', 'monochrome', 'top']
+        },
+        {
+            image: 'images/HTJ-96.jpg',
+            city: 'Belitong',
+            country: 'Indonesia',
+            year : '2012',
+            tags : ['digital', 'color', 'top']
+        },
+        {
+            image: 'images/HTJ-97.jpg',
+            city: 'New York City',
+            country: 'USA',
+            year : '2013',
+            tags : ['digital', 'monochrome', 'portrait', 'top']
+        },
+        {
+            image: 'images/HTJ-98.jpg',
+            city: 'New York City',
+            country: 'USA',
+            year : '2013',
+            tags : ['digital', 'color', 'street', 'top']
+        },
+        {
+            image: 'images/HTJ-99.jpg',
+            city: 'New York City',
+            country: 'USA',
+            year : '2013',
+            tags : ['digital', 'color', 'street']
+        },
+        {
+            image: 'images/HTJ-100.jpg',
+            city: 'New York City',
+            country: 'USA',
+            year : '2013',
+            tags : ['digital', 'color', 'street']
+        },
+        {
+            image: 'images/HTJ-101.jpg',
+            city: 'New York City',
+            country: 'USA',
+            year : '2013',
+            tags : ['digital', 'monochrome', 'street', 'top']
+        },
+        {
+            image: 'images/HTJ-102.jpg',
+            city: 'New York City',
+            country: 'USA',
+            year : '2013',
+            tags : ['film', 'color', 'street', 'portrait', 'top']
+        },
+        {
+            image: 'images/HTJ-103.jpg',
+            city: 'Los Angeles',
+            country: 'USA',
+            year : '2013',
+            tags : ['film', 'color', 'street', 'top']
+        },
+        {
+            image: 'images/HTJ-104.jpg',
+            city: 'Los Angeles',
+            country: 'USA',
+            year : '2013',
+            tags : ['film', 'color', 'street']
+        },
+        {
+            image: 'images/HTJ-105.jpg',
+            city: 'Chicago',
+            country: 'USA',
+            year : '2014',
+            tags : ['digital', 'color', 'street', 'top']
+        },
+        {
+            image: 'images/HTJ-106.jpg',
+            city: 'Champaign',
+            country: 'USA',
+            year : '2014',
+            tags : ['digital', 'color', 'assignment']
+        },
+        {
+            image: 'images/HTJ-107.jpg',
+            city: 'Champaign',
+            country: 'USA',
+            year : '2014',
+            tags : ['digital', 'color', 'portrait', 'assignment', 'top']
+        },
+        {
+            image: 'images/HTJ-108.jpg',
+            city: 'Champaign',
+            country: 'USA',
+            year : '2014',
+            tags : ['digital', 'color', 'portrait', 'assignment', 'top']
+        },
+        {
+            image: 'images/HTJ-109.jpg',
+            city: 'Chicago',
+            country: 'USA',
+            year : '2014',
+            tags : ['film', 'color', 'street']
+        },
+        {
+            image: 'images/HTJ-110.jpg',
+            city: 'New York City',
+            country: 'USA',
+            year : '2013',
+            tags : ['digital', 'monochrome', 'top']
+        }
     ];
     return Album;
 });
@@ -511,7 +623,7 @@ photoApp.factory('ActiveTagsButton', function () {
         },
         {
             first: 'Color',
-            second: ['Color', 'Black and White']
+            second: ['Color', 'Monochrome']
         },
         {
             first: 'Genre',
