@@ -59,6 +59,41 @@ body {
   margin-top: 28px;
 }
 
+.menu-button > li > a{
+  transition: background-color 0.1s ease;
+  color: rgb(150,150,150);
+  border-right: 1px solid rgb(150,150,150);
+  border-radius: 0px;
+  padding: 5px 17px;
+}
+
+.menu-button > li:last-child > a{
+  border-right:none !important;
+}
+
+.menu-button > li.active > a{
+  color: rgb(0,0,0) !important;
+  background-color: transparent !important;
+  border-right: 1px solid rgb(150,150,150);
+  border-radius: 0px;
+  padding: 5px 17px;
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+.menu-button > li > a:hover, .menu-button > li.active > a:hover{
+  color: rgb(0,0,0) !important;
+  background-color: rgb(240,240,240) !important;
+  border-right: 1px solid rgb(150,150,150);
+  border-radius: 0px;
+  padding: 5px 17px;
+}
+
+photo-slider > div > a > img.img-responsive {
+  margin: auto;
+  max-height : 400px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */

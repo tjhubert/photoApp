@@ -19,4 +19,26 @@ photoApp.controller('IndexCtrl', function($scope, $location)
             return;
         }
     };
+
+    $scope.showHeaderFooter = function () {
+        if ($location.path() === '/')
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    };
+
+    $scope.wrapperOrContainer = function () {
+        if ($location.path() === '/')
+        {
+            return 'wrapper';
+        }
+        else
+        {
+            return 'container';
+        }
+    };
 });
