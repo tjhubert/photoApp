@@ -13,8 +13,8 @@ photoApp.factory('Quotes', function () {
             tags : ['photography']
         },
         {
-            quote: 'wise words from c++ documentation: Another property of friendships is that they are not transitive: The friend of a friend is not considered a friend unless explicitly specified.',
-            by: 'me',
+            quote: 'Another property of friendships is that they are not transitive: The friend of a friend is not considered a friend unless explicitly specified.',
+            by: 'cplusplus.com',
             tags : ['photography']
         },
         {
@@ -28,15 +28,10 @@ photoApp.factory('Quotes', function () {
             tags : ['photography']
         },
         {
-            quote: 'Sometimes I like to think religious groups are just groups confused people, because nobody knows for sure about the afterlife.',
+            quote: 'Feasting your eyes on highly saturated pictures are like eating junk food; they are cheap, fast, and easy.',
             by: 'me',
-            tags : ['religion']
+            tags : ['photography']
         },
-        {
-            quote: 'A pedophile who works in KidZania is the happiest man in the world.',
-            by: 'me',
-            tags : ['twisted']
-        }
     ];
     return Quotes;
 });
