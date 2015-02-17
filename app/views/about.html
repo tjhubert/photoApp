@@ -1,0 +1,8 @@
+<div ng-controller="AboutCtrl">
+	<p>Writing an autobiography is very narcissistic. It's like someone bragging about his/her ups and downs endlessly. God, imagine an audiobook of an autobiography read by the author himself.</p>
+	<p>Since this is my website, so I guess the About page should talk about me. As much as I want to avoid talking about myself, I'm not that famous or influential yet that someone would write me a biography. I'll be honest: I'm not very articulate, I genuinely think language is my weakest point. I have created many awkward situations, have both written and spoken many unacceptable grammatical errors, and have made wrong impressions to people because my tone was often considered rude.</p>
+	<p>Although I hate writing, I still have opinions and I like to air them out sometimes. I am not very clear about my own aim in being opinionated; maybe I like to be considered as wise and mature, maybe I want to make people rethink about some stuff that I have opinion about. As my English teachers always have told me: the longer you write, the more mistakes you will make, forming my opinions in the form of short sentences would be the best way to fill this About page.</p>
+	<p ng-repeat="line in quotes">
+	    <b>"{{line.quote}}"</b>, <i>-{{line.by}}</i>
+	</p>
+</div>

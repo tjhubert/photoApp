@@ -1,0 +1,32 @@
+<div class="wrapper" ng-controller="WelcomeCtrl" ng-swipe-left="next()" ng-swipe-right="prev()">
+	<div>
+		<photo-slider ng-cloak>
+            <div ng-repeat="photo in filtered">
+            	<img ng-src={{photo.image}} class="welcome" alt="" ng-show="photo.visible">
+            </div>
+            <a class="arrow prev" href="" ng-click="prev()"></a>
+   			<a class="arrow next" href="" ng-click="next()"></a>
+    	</photo-slider>
+			<a href="#/main/about">
+				<div class="welcome-logo"></div>
+			</a>
+		    <div class="center-navigation">
+				<nav class="nav">
+			        <div class="wrapper">
+			            <ul class="dots">
+			                <li class="dot" ng-repeat="photo in filtered">
+			                    <a href="#" ng-class="{'active':isCurrentIndex($index)}"
+			                       ng-click="setCurrentIndex($index)">
+			                   	</a>
+			                  </li>
+			            </ul>
+			        </div>
+			    </nav>
+			    <a href="#/main/gallery">
+					<button class="welcome-button">
+						ENTER
+					</button>
+				</a>
+			</div>
+	</div>
+</div>
